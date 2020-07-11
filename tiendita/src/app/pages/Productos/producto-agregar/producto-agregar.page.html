@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="['/tabs/tab3']">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-title>Nuevo Producto</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form>
+        <ion-item>
+            <ion-label position="floating ">Nombre</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating ">Tamaño</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating ">Precio</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-row>
+            <ion-col size="8">
+                <ion-select placeholder="Seleccionar">
+                    <ion-select-option value="cervezas">Cervezas</ion-select-option>
+                    <ion-select-option value="refrescos">Refrescos</ion-select-option>
+                    <ion-select-option value="dulces">Dulces</ion-select-option>
+                    <ion-select-option value="sabritas">Sabritas</ion-select-option>
+                </ion-select>
+            </ion-col>
+            <ion-col>
+                <ion-button color="light">NUEVA</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-item class="center">
+            <app-imagenpicker></app-imagenpicker>
+        </ion-item>
+    </form>
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="block ">Aceptar</ion-button>
+</ion-footer>
