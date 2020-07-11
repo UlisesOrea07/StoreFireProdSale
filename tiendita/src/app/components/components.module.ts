@@ -10,12 +10,17 @@ import { HeaderComponent } from './header/header.component';
 import {ShowCategoriaComponent} from './show-categoria/show-categoria.component'
 import {ShowProductoComponent} from './show-producto/show-producto.component'
 
+import { BuscadorComponent } from "./buscador/buscador.component";
+import { ImagenpickerComponent } from "./imagenpicker/imagenpicker.component";
+
 
 @NgModule({
   declarations: [
 
     ModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    BuscadorComponent, 
+    ImagenpickerComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +30,10 @@ import {ShowProductoComponent} from './show-producto/show-producto.component'
     ModalComponent,
     HeaderComponent
     ShowCategoriaComponent,
-    ShowProductoComponent
+    ShowProductoComponent,
+    BuscadorComponent,
+    ImagenpickerComponent
   ],
 })
 export class ComponentsModule { }
+

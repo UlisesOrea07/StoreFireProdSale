@@ -1,5 +1,7 @@
 {
   "name": "tiendita",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
