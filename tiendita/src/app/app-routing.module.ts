@@ -5,7 +5,9 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  { path: '', loadChildren: () => import('./pages/tab2/tab2.module').then(m => m.Tab2PageModule) },
+  {
     path: 'page-productos',
     loadChildren: () => import('./pages/page-productos/page-productos.module').then( m => m.PageProductosPageModule)
   }
@@ -18,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+

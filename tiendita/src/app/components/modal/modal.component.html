@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eliminación de productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row class="border">
+      <ion-col class="texto-truncado" size="6">
+        <ion-list>
+          <ion-item>
+            <ion-text> 
+              <h3> Nombre: </h3>  
+              <p> {{ nombre }} </p> 
+            </ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>
+              <h3>Contenido</h3>
+              <p> {{ contenido }} </p>
+            </ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>
+              <h3>Cantidad</h3>
+              <p> {{ cantidad }} </p>
+            </ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>
+              <h3>Costo</h3>
+              <p> {{ costo }} </p>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <h3>¿Cúantos productos desea eliminar?</h3>
+        </ion-text>
+          <ion-select interface="popover" okText="Ok" cancelText="Cancelar" placeholder="Seleccione">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+            <ion-select-option value="6">6</ion-select-option>
+          </ion-select>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+          <ion-button expand="block" color="danger" size="large" (click)="Cancelar()">
+            <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+          </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="success" size="large" (click)="Cancelar()">
+          <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
