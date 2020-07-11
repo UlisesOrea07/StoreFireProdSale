@@ -20,7 +20,9 @@ import { ImagenpickerComponent } from './imagenpicker/imagenpicker.component';
     ModalComponent,
     HeaderComponent,
     BuscadorComponent,
-    ImagenpickerComponent
+    ImagenpickerComponent,
+    ShowCategoriaComponent,
+    ShowProductoComponent,
   ],
   imports: [
     CommonModule,
