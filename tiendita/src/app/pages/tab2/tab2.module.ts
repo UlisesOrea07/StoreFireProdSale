@@ -6,13 +6,20 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { ComponentsModule } from '../../components/components.module';
+import { ModalComponent } from '../../components/modal/modal.component';
+
+
+
 
 @NgModule({
+  entryComponents: [ ModalComponent ],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    ComponentsModule
   ],
   declarations: [Tab2Page]
 })
