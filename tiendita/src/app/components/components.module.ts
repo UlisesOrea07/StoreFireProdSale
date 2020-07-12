@@ -1,17 +1,16 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { ModalComponent } from './modal/modal.component';
-import { HeaderComponent } from './header/header.component';
+import { ModalComponent } from "./modal/modal.component";
+import { HeaderComponent } from "./header/header.component";
 
+import { ShowCategoriaComponent } from "./show-categoria/show-categoria.component";
+import { ShowProductoComponent } from "./show-producto/show-producto.component";
 
-import {ShowCategoriaComponent} from './show-categoria/show-categoria.component';
-import {ShowProductoComponent} from './show-producto/show-producto.component';
-
-import { BuscadorComponent } from './buscador/buscador.component';
-import { ImagenpickerComponent } from './imagenpicker/imagenpicker.component';
+import { BuscadorComponent } from "./buscador/buscador.component";
+import { ImagenpickerComponent } from "./imagenpicker/imagenpicker.component";
 
 @NgModule({
   declarations: [
@@ -21,10 +20,6 @@ import { ImagenpickerComponent } from './imagenpicker/imagenpicker.component';
     ImagenpickerComponent,
     ShowCategoriaComponent,
     ShowProductoComponent,
-  ],
-  imports: [
-    CommonModule,
-    IonicModule
   ],
   imports: [CommonModule, IonicModule],
   exports: [
