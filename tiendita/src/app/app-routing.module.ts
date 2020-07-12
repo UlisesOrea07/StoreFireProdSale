@@ -1,7 +1,8 @@
-import { NgModule } from "@angular/core";
-import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+
   {
     path: "",
     loadChildren: () =>
@@ -12,6 +13,7 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/tab1/tab1.module").then((m) => m.Tab1PageModule),
   },
+
   {
     path: "",
     loadChildren: () =>
@@ -23,6 +25,7 @@ const routes: Routes = [
       import("./pages/tab3/tab3.module").then((m) => m.Tab3PageModule),
   },
   {
+
     path: "page-productos",
     loadChildren: () =>
       import("./pages/page-productos/page-productos.module").then(
@@ -32,9 +35,7 @@ const routes: Routes = [
   {
     path: "producto-agregar",
     loadChildren: () =>
-      import("./pages/Productos/producto-agregar/producto-agregar.module").then(
-        (m) => m.ProductoAgregarPageModule
-      ),
+      import('./pages/Productos/producto-agregar/producto-agregar.module').then((m) => m.ProductoAgregarPageModule)
   },
 ];
 @NgModule({

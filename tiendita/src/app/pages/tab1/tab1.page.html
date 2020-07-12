@@ -4,17 +4,19 @@
             Lista de precios
         </ion-title>
     </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Lista de precios</ion-title>
-        </ion-toolbar>
-    </ion-header>
-    <section>
-        <h2>Categorías</h2>
-    </section>
+  </ion-header>
+  <section>
+    <h2>Categorías</h2>
+  </section>
+  
+  <app-show-categoria></app-show-categoria>
+
+  <ion-footer>
+      <ion-toolbar>
+          <ion-title>Total: $ 0.00</ion-title>
+      </ion-toolbar>
+    </ion-footer>
 
     <app-show-categoria></app-show-categoria>
 

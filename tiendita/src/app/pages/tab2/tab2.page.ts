@@ -1,15 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalComponent } from '../../components/modal/modal.component';
+import { VentasService } from '../../services/ventas.service';
+import { Ventas } from '../../interfaces/ventas.interface';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
 
-  constructor( private modalCtrl: ModalController ) {}
+  ventas: Ventas[] = [];
+  total = 0;
+
+  constructor( private modalCtrl: ModalController, private service: VentasService) {
+  }
+
+  ngOnInit(): void {
+    this.cargarVentas();
+  }
+
+  cargarVentas(){
+      this.service.cargarVentas().subscribe( (data: Ventas[]) => {
+        this.ventas = data;
+        this.ventas.forEach(item => {
+          this.total += item.total;
+        });
+      });
+
+  }
+
 
   realizarVenta(){
 
