@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,10 +13,8 @@ import {ShowProductoComponent} from './show-producto/show-producto.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { ImagenpickerComponent } from './imagenpicker/imagenpicker.component';
 
-
 @NgModule({
   declarations: [
-
     ModalComponent,
     HeaderComponent,
     BuscadorComponent,
@@ -28,14 +26,14 @@ import { ImagenpickerComponent } from './imagenpicker/imagenpicker.component';
     CommonModule,
     IonicModule
   ],
+  imports: [CommonModule, IonicModule],
   exports: [
     ModalComponent,
     HeaderComponent,
     ShowCategoriaComponent,
     ShowProductoComponent,
     BuscadorComponent,
-    ImagenpickerComponent
+    ImagenpickerComponent,
   ],
 })
-export class ComponentsModule { }
-
+export class ComponentsModule {}
