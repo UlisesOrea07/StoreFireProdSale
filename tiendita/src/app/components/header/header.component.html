@@ -1,7 +1,9 @@
-<ion-header>
+<!-- propiedad que quita el borde -->
+<ion-header mode="ios" no-border translucent="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
+      <ion-buttons slot="start">
+          <ion-back-button text="Regresar" defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="text-capitalize"> {{ titulo }} </ion-title>
   </ion-toolbar>
 </ion-header>

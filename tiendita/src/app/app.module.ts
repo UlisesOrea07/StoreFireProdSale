@@ -10,10 +10,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { PipesModule } from './pipes/pipes.module';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp( environment.firebaseConfig ),
+    AngularFireDatabaseModule,
+    PipesModule,
+    FormsModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

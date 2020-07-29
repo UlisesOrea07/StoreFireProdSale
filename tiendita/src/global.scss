@@ -24,3 +24,23 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.texto-truncado{
+    word-wrap: break-word;
+    white-space: initial;
+}
+img{
+    height:80px;
+    width:80%;
+}
+
+ion-card{
+	text-align: center;
+	align-content: center;
+	align-self: center;
+	img{
+	  text-align: center;
+	  align-content: center;
+	  align-self: center;
+	}
+}

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Eliminación de productos</ion-title>
+    <ion-title> {{ titulo }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,14 +22,22 @@
             </ion-text>
           </ion-item>
           <ion-item>
-            <ion-text>
+            <ion-text *ngIf="operacion === 'agregar'">
+              <h3>Cantidad a comprar</h3>
+              <p> {{ cantidad }} </p>
+            </ion-text>
+            <ion-text *ngIf="operacion === 'eliminar'">
+              <h3>Cantidad comprada</h3>
+              <p> {{ cantidadComprada }} </p>
+            </ion-text>
+            <ion-text *ngIf="operacion === 'editar'">
               <h3>Cantidad</h3>
               <p> {{ cantidad }} </p>
             </ion-text>
           </ion-item>
           <ion-item>
             <ion-text>
-              <h3>Costo</h3>
+              <h3>Precio</h3>
               <p> {{ costo }} </p>
             </ion-text>
           </ion-item>
@@ -37,16 +45,20 @@
       </ion-col>
       <ion-col size="6">
         <ion-text>
-          <h3>¿Cúantos productos desea eliminar?</h3>
+          <h3>{{ subtitulo }}</h3>
         </ion-text>
-          <ion-select interface="popover" okText="Ok" cancelText="Cancelar" placeholder="Seleccione">
-            <ion-select-option value="1">1</ion-select-option>
-            <ion-select-option value="2">2</ion-select-option>
-            <ion-select-option value="3">3</ion-select-option>
-            <ion-select-option value="4">4</ion-select-option>
-            <ion-select-option value="5">5</ion-select-option>
-            <ion-select-option value="6">6</ion-select-option>
-          </ion-select>
+        
+        <div class="dropdown">
+          <input [(ngModel)]="cantidad" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2" type="number" />
+          <select [(ngModel)]="cantidad">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+          </select>
+        </div>
+
       </ion-col>
     </ion-row>
 
@@ -57,7 +69,7 @@
           </ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button expand="block" color="success" size="large" (click)="Cancelar()">
+        <ion-button expand="block" color="success" size="large" (click)="Aceptar()">
           <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
         </ion-button>
       </ion-col>
