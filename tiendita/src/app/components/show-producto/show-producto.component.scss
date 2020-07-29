@@ -1,15 +1,17 @@
 img{
-    height:60px;
-    width:60%;
+    height:80px;
+    width:80%;
+	text-align: center;
+	align-content: center;
+	align-self: center;
+}
+
+.borde {
+	border: black 1px solid;
 }
 
 ion-card{
 	text-align: center;
 	align-content: center;
 	align-self: center;
-	img{
-	  text-align: center;
-	  align-content: center;
-	  align-self: center;
-	}
 }

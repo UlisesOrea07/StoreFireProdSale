@@ -1,54 +1,13 @@
-
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-card padding  (click)="navigateToUser()">
-          <img src="../../../assets/img/1S.jpg"/>
-          <ion-card-title>Sabritas</ion-card-title> <br>
-          <ion-card-content>
-            800 g. <br>
-            $ 30.00
-          </ion-card-content>>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6>
-        <ion-card padding>
-          <img src="../../../assets/img/2S.jpg" />
-          <ion-card-title>Rancheritos</ion-card-title> <br>
-          <ion-card-content>
-            300 g. <br>
-            $ 15.00
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6>
-        <ion-card padding>
-          <img src="../../../assets/img/3S.jpg" />
-          <ion-card-title>Chetos</ion-card-title>> <br>
-          <ion-card-content>
-            250 g. <br>
-            $ 10.00
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-        <ion-card padding>
-          <img src="../../../assets/img/4S.jpg" />
-          <ion-card-title>Churrumais</ion-card-title> <br>
-          <ion-card-content>
-            100 g. <br>
-            $ 8.00
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col col-6>
-      </ion-col>
-      <ion-col col-6>
-      </ion-col>
-      
-    </ion-row>
-  </ion-grid>
-
+<ion-card (click)="seleccionado(producto)" >
+  <img [src]="producto.imagen" class="borde" />
+  <ion-card-header>
+    <ion-card-subtitle color="dark"> <h3> {{ producto.nombre }} </h3> </ion-card-subtitle>
+    <ion-card-title> Precio: ${{ producto.costo }} </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-text>
+      <h2> Contenido: </h2>
+      <h4>{{ producto.contenido }} </h4>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

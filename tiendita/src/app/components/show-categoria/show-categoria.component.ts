@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
+import { Categoria } from '../../interfaces/categorias.interface';
 
 @Component({
   selector: 'app-show-categoria',
@@ -8,13 +9,14 @@ import { Router } from "@angular/router";
   styleUrls: ['./show-categoria.component.scss'],
 })
 export class ShowCategoriaComponent implements OnInit {
+  @Input() categoria: Categoria;
 
   constructor(private router: Router) { }
 
-  navigateToUser() {
-    this.router.navigate(["/page-productos"]);
+  navigateCategoria(item: string) {
+    this.router.navigate(['page-productos', item]);
   }
-  
+
   ngOnInit() {}
 
 

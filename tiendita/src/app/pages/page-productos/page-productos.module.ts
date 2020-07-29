@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { PageProductosPageRoutingModule } from './page-productos-routing.module';
 
 import { PageProductosPage } from './page-productos.page';
-import {ComponentsModule } from '../../components/components.module'
+import {ComponentsModule } from '../../components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {ComponentsModule } from '../../components/components.module'
     FormsModule,
     IonicModule,
     PageProductosPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   declarations: [PageProductosPage]
 })

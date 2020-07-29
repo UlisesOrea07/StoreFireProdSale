@@ -2,9 +2,28 @@
     border: solid red 5px;
 }
 
-.texto-truncado{
-    word-wrap: break-word;
-    white-space: initial;
+.dropdown {
+  position: relative;
+  width: 160px;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.5s;
+}
+.dropdown select
+{
+  width: 64%;
+  background: orange;
+  transition: all 0.5s ease;
+}
+.dropdown > * {
+  box-sizing: border-box;
+  height: 1.5em;
+}
+.dropdown select {
+}
+.dropdown input {
+  position: absolute;
+  width: calc(80% - 42px);
 }
 
 /* Set the width to the full container and center the content */

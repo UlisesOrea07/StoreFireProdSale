@@ -1,0 +1,53 @@
+
+ <app-buscador></app-buscador>
+
+ <ion-list>
+     <ion-item>
+         <ion-avatar slot="start">
+             <img src="../../../assets/cvz.jpg" />
+         </ion-avatar>
+         <ion-label>
+             <h4>Nombre: Cerveza</h4>
+             <h5>Precio: 35</h5>
+             <p>Tamaño: 2LT</p>
+         </ion-label>
+
+         <ion-icon name="create" [routerLink]="['/producto-agregar']"></ion-icon>
+
+         <ion-icon name="trash" [routerLink]="['/producto-agregar']"></ion-icon>
+     </ion-item>
+     <ion-item>
+         <ion-avatar slot="start">
+             <img src="../../../assets/cvz.jpg" />
+         </ion-avatar>
+         <ion-label size="3">
+             <h4>Nombre: Cerveza</h4>
+             <h5>Precio: 35</h5>
+             <p>Tamaño: 2LT</p>
+         </ion-label>
+
+         <ion-icon name="create" [routerLink]="['/producto-agregar']"></ion-icon>
+
+         <ion-icon name="trash" [routerLink]="['/producto-agregar']"></ion-icon>
+     </ion-item>
+
+     <ion-item>
+         <ion-avatar slot="start">
+             <img src="../../../assets/cvz.jpg" />
+         </ion-avatar>
+         <ion-label size="3">
+             <h4>Nombre: Cerveza</h4>
+             <h5>Precio: 35</h5>
+             <p>Tamaño: 2LT</p>
+         </ion-label>
+
+         <ion-icon name="create" [routerLink]="['/producto-agregar']"></ion-icon>
+
+         <ion-icon name="trash" [routerLink]="['/producto-agregar']"></ion-icon>
+     </ion-item>
+ </ion-list>
+
+ <ion-infinite-scroll threshold="100px" id="infinite-scroll">
+     <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+     </ion-infinite-scroll-content>
+ </ion-infinite-scroll>

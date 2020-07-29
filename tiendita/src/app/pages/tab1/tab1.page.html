@@ -1,19 +1,30 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-title>
-            Lista de precios
-        </ion-title>
-    </ion-toolbar>
-
+  <ion-toolbar>
+    <ion-title>
+      Categorias
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
-<section>
-    <h2>Categorías</h2>
-</section>
 
-<app-show-categoria></app-show-categoria>
+<ion-content [fullscreen]="true">
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let categoria of categorias; let i = index" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="6">
+        <app-show-categoria [categoria]="categoria" ></app-show-categoria>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
 
 <ion-footer>
-    <ion-toolbar>
-        <ion-title>Total: $ 0.00</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-title> 
+      <ion-text>
+          <b> Total: </b> <i> $ {{ total }} </i>
+      </ion-text>
+    </ion-title>
+  </ion-toolbar>
 </ion-footer>
+

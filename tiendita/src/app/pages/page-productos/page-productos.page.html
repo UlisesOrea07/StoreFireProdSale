@@ -1,14 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Productos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [titulo]="titulo" ></app-header>
 
 <ion-content>
-  <section >
-    <h3>Sabritas</h3>
-  </section>
-  
-  <app-show-producto></app-show-producto>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let item of productos | filtroProductos: categoria; let i = index" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="6">
+        <app-show-producto [producto]="item" ></app-show-producto>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
